@@ -1,0 +1,158 @@
+/* --- Estilos para ALERTS --- */
+.alert {
+    border: 1px solid transparent;
+}
+/* ... (outras classes de alert, badge, tag e toast) ... */
+.alert-success {
+    background-color: #d1fae5; /* green-100 */
+    border-color: #34d399; /* green-400 */
+    color: #065f46; /* green-800 */
+}
+
+.alert-danger {
+    background-color: #fee2e2; /* red-100 */
+    border-color: #f87171; /* red-400 */
+    color: #991b1b; /* red-800 */
+}
+
+/* --- Estilos para BADGES (Reconhecimento) --- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem; /* sm */
+    font-weight: 600;
+    border-radius: 9999px; /* full rounded */
+}
+/* ... (outras classes de badge) ... */
+.badge-success {
+    background-color: #a7f3d0;
+    color: #065f46;
+}
+
+.badge-info {
+    background-color: #bfdbfe;
+    color: #1e40af;
+}
+
+.badge-warning {
+    background-color: #fde68a;
+    color: #92400e;
+}
+
+
+/* --- Estilos para TAGS (Foco) --- */
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem; /* xs */
+    font-weight: 500;
+    border-radius: 0.5rem; /* rounded-lg */
+    text-transform: uppercase;
+}
+/* ... (outras classes de tag) ... */
+.tag-primary {
+    background-color: #e0f2f1;
+    color: #0d9488;
+}
+
+.tag-secondary {
+    background-color: #eef2ff;
+    color: #4f46e5;
+}
+
+.tag-danger {
+    background-color: #fef2f2;
+    color: #ef4444;
+}
+
+.tag-info {
+    background-color: #eff6ff;
+    color: #3b82f6;
+}
+
+.tag-success {
+    background-color: #f0fdf4;
+    color: #10b981;
+}
+
+/* --- Estilos para TOASTS (Notificações) --- */
+.toast {
+    position: relative;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast-success {
+    background-color: #10b981; /* ngo-primary */
+    color: white;
+}
+
+.toast-error {
+    background-color: #ef4444; /* red-500 */
+    color: white;
+}
+
+.toast-info {
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+}
+
+.toast-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+
+/* --- Estilos para FORMULÁRIOS com Validação Visual --- */
+
+/* Estilo para campos de formulário em estado de ERRO */
+.form-group.error .form-input {
+    border-color: #ef4444 !important; /* red-500 - USAMOS !important PARA SOBRESCREVER O FOCUS DO TAILWIND */
+    box-shadow: 0 0 0 2px #fca5a5; /* red-300 */
+}
+
+/* Exibir a mensagem de validação em caso de erro */
+.form-group.error .validation-message {
+    display: block !important;
+}
+
+/* Estilo para campos de formulário em estado de SUCESSO (opcional) */
+.form-group.success .form-input {
+    border-color: #10b981 !important; /* ngo-primary (verde) - USAMOS !important */
+    box-shadow: 0 0 0 2px #a7f3d0; /* green-200 */
+}
+
+/* --- Estilos de BOTÕES --- */
+
+/* Estilo customizado para o botão desabilitado (demo) */
+.disabled-demo {
+    /* Garante que o estado desabilitado do Tailwind seja forte */
+    background-color: #9ca3af !important; /* gray-400 */
+    cursor: not-allowed;
+    box-shadow: none !important;
+    opacity: 0.7;
+}
+
+/* Opcional: Estilo para o modal overlay */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}

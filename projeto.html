@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Apoio Comunitário</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="projeto.html" class="text-2xl font-bold text-ngo-primary tracking-tight">
+                Apoio Comunitário
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-gray-600 hover:text-ngo-primary transition duration-150">Início</a>
+                <a href="projeto.html" class="text-ngo-primary border-b-2 border-ngo-primary font-semibold transition duration-150">O que Fazemos</a>
+                <a href="contato.html#doe" class="text-gray-600 hover:text-ngo-primary transition duration-150">Contato/Doar</a>
+            </nav>
+
+           
+
+            <button id="menu-button" class="md:hidden text-gray-500 hover:text-ngo-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-ngo-primary bg-green-50">Início</a>
+                <a href="projeto.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-green-50 hover:text-ngo-primary">O que Fazemos</a>
+                <a href="contato.html#doe" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-green-50 hover:text-ngo-primary">Contato/Doar</a>
+                <a href="contato.html#junte-se" class="block w-full text-center bg-indigo-500 text-white font-semibold py-2 rounded-lg mt-2">Voluntariado</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="py-16 md:py-24">
+        <section id="acao" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-4" id="missao">Nossa Visão de Impacto e Transformação</h1>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-4xl mx-auto">
+                Nosso propósito é catalisar a mudança local, empoderando indivíduos através de ferramentas e oportunidades. Acreditamos que a verdadeira transformação começa na base da comunidade.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] border-t-4 border-indigo-600">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.464 9.492 5 8 5c-3.314 0-6 2.686-6 6 0 2.348 1.332 4.39 3.316 5.567M12 6.253C13.168 5.464 14.508 5 16 5c3.314 0 6 2.686 6 6 0 2.348-1.332 4.39-3.316 5.567m-9.006 3.129C9.278 19.344 10.518 20 12 20c3.314 0 6-2.686 6-6 0-1.077-.282-2.083-.787-2.955M12 6.253a6 6 0 00-6 6c0 1.077.282 2.083.787 2.955"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Educação para o Futuro</h3>
+                    <p class="text-gray-600">
+                        Oferecemos bolsas, materiais e reforço escolar para garantir que crianças e jovens tenham acesso à educação de qualidade.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] border-t-4 border-indigo-600">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Saúde e Bem-Estar</h3>
+                    <p class="text-gray-600">
+                        Promovemos clínicas móveis, distribuição de medicamentos essenciais e campanhas de vacinação em áreas carentes.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] border-t-4 border-indigo-600">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Voluntariado e Engajamento</h3>
+                    <p class="text-gray-600">
+                        Conectamos voluntários passionais com projetos significativos, facilitando a contribuição de tempo e habilidades.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-white">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-ngo-primary">Apoio Comunitário</h4>
+                    <p class="text-gray-400 text-sm">
+                        ONG dedicada à transformação social através da educação e saúde.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Causa</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition">Home</a></li>
+                        <li><a href="projeto.html" class="text-gray-400 hover:text-white text-sm transition">Projetos em Andamento</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Transparência</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Envolva-se</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contato.html#doe" class="text-gray-400 hover:text-white text-sm transition">Doações</a></li>
+                        <li><a href="contato.html#junte-se" class="text-gray-400 hover:text-white text-sm transition">Voluntariado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Parcerias</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Siga-nos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-ngo-primary transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4.34a8.49 8.49 0 01-2.48.68 4.31 4.31 0 001.88-2.39 8.62 8.62 0 01-2.73 1.05A4.31 4.31 0 0015 6.94c-2.73 0-4.3 2.1-4.3 4.31 0 .34.04.67.11 1A12.23 12.23 0 013 4.41a4.32 4.32 0 001.34 5.76c-.84 0-1.63-.26-2.31-.64v.05c0 2.3 1.63 4.2 3.8 4.64a4.34 4.34 0 01-1.94.07c.6 1.88 2.37 3.25 4.47 3.29A8.65 8.65 0 012 18.78 12.19 12.19 0 008.6 20c7.87 0 12.15-6.52 12.15-12.15 0-.18 0-.36-.01-.54A8.86 8.86 0 0022 4.34z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-gray-500 text-sm">
+                &copy; 2025 Apoio Comunitário. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
