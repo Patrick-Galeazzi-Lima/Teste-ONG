@@ -1,0 +1,508 @@
+/* ============================================== */
+/* ESTILOS PARA O POP-UP (MODAL) DE CONFIRMAÇÃO */
+/* ============================================== */
+.modal {
+    /* Fundo escurecido que cobre toda a tela */
+    position: fixed; /* Fixado para cobrir a tela toda */
+    z-index: 100; /* Garante que fique acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgba(0,0,0,0.8); /* Fundo preto semi-transparente (Dark/Vibrante) */
+}
+
+.modal-content {
+    /* O conteúdo central do pop-up */
+    /* Estilos base foram colocados inline para garantir que funcionem de imediato */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:root {
+    /* Cores de Fundo e Texto Monocromáticas (Dark Mode) */
+    --cor-fundo-escuro: #111111; /* Preto Quase Puro para Header/Footer */
+    --cor-texto-claro: #FFFFFF;
+    --cor-cinza-sutil: #CCCCCC;
+    --cor-cinza-hover: #666666;
+    --cor-borda-escura: #333333;
+    
+    /* Cores de Destaque para Ação (Laranja Vibrante) */
+    --cor-destaque-acao-vibrante: #E67E22; 
+    --cor-hover-acao-vibrante: #D35400; 
+    
+    /* Cores de Conteúdo Principal (mantidas claras para contraste com o body) */
+    --cor-fundo-claro-secao: #FFFFFF;
+    --cor-texto-principal-claro: #2C3E50;
+}
+
+:root {
+    /* Manter a cor de destaque (LARANJA/CORAL) para o botão de ação */
+    --cor-destaque-acao-vibrante: #E67E22; 
+    --cor-hover-acao-vibrante: #D35400; /* Um pouco mais escuro */
+    
+    /* Cores Monocromáticas (já definidas) */
+    --cor-fundo-footer: #111111;
+    --cor-texto-claro: #FFFFFF;
+}
+
+/* === RODAPÉ (FOOTER) - VERSÃO 5 COLUNAS FUNCIONAIS === */
+footer {
+    /* Fundo escuro para contraste sólido */
+    background-color: #111111; 
+    color: #FFFFFF; /* Texto branco */
+    padding: 50px 25px 30px; 
+    text-align: left; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Grid de 5 colunas para telas grandes. Minmax garante flexibilidade. */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.footer-section h4 {
+    color: #CCCCCC; /* Títulos em cinza claro para destaque suave */
+    font-size: 1.1em;
+    margin-bottom: 18px;
+    font-weight: 700;
+    /* Linha sutil abaixo do título para organização */
+    border-bottom: 2px solid #333333; 
+    padding-bottom: 5px;
+}
+
+/* Estilo para links e texto de utilidade */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #666666; /* Cinza de destaque ao passar o mouse */
+}
+
+/* Estilo específico para o item "Envolvimento com o Cliente" */
+.client-engagement p {
+    color: #CCCCCC;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Direitos Autorais e Créditos */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    font-size: 0.85em;
+    color: #CCCCCC;
+}
+
+/* Ajuste para telas menores (Responsividade) */
+@media (max-width: 900px) {
+    .footer-container {
+        /* Muda para 2 colunas em tablets */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    }
+}
+@media (max-width: 550px) {
+    .footer-container {
+        /* Volta a ser 1 coluna em mobile */
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-section h4 {
+        text-align: center;
+    }
+}
+/* === RODAPÉ (FOOTER) - VERSÃO 5 COLUNAS FUNCIONAIS === */
+/* ... (Seções de rodapé anteriores) ... */
+
+/* Estilo para o Botão de Destaque NO RODAPÉ */
+.footer-section .btn-destaque-vibrante {
+    /* Usando a cor de destaque vibrante aqui */
+    background-color: var(--cor-destaque-acao-vibrante) !important; 
+    color: white !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    
+    padding: 10px 15px;
+    border-radius: 4px; 
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    
+    /* Garante que ele se sobressaia visualmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.footer-section .btn-destaque-vibrante:hover {
+    background-color: var(--cor-hover-acao-vibrante) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* === SEÇÕES (MAIN/SECTION) - COERÊNCIA MONOCROMÁTICA === */
+
+main {
+    /* Garante que o fundo do MAIN seja transparente para mostrar o BODY background */
+    background-color: transparent; 
+    max-width: 1200px; 
+    margin: 30px auto; 
+    padding: 0 25px;
+}
+
+section {
+    /* Mantém o fundo branco puro para contraste com o BODY (f0f0f0) */
+    background-color: #ffffff; 
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px; /* Reduzi o raio para um toque mais moderno/minimalista */
+    /* Sombra neutra e sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); 
+    text-align: center; 
+}
+
+/* === ESTILOS GERAIS (BODY) - MELHORIA DE BACKGROUND === */
+body {
+    /* (Mantenha as propriedades de fonte, margin, padding etc.) */
+    
+    /* * NOVO BACKGROUND: Fundo principal com gradiente radial sutil.
+     * Começa branco puro no centro e vai suavemente para um cinza muito claro nas bordas.
+     */
+    background-color: #f0f0f0; /* Cor de fallback/bordas */
+    background-image: radial-gradient(circle at center, #ffffff 0%, #f0f0f0 100%); 
+    
+    /* Outras propriedades existentes do body... */
+}
+/* === CABEÇALHO (HEADER) - ESTILO DARK/VIBRANTE UNIFICADO COM O FOOTER === */
+
+header {
+    /* Fundo Escuro Sólido: Consistente com o rodapé */
+    background-color: var(--cor-fundo-escuro); 
+    
+    /* Sombra para destaque em fundos claros */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    
+    /* Espaçamento e Posicionamento */
+    padding: 15px 25px;
+    position: sticky; /* Sticky Header para melhor UX */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* Linha divisória sutil abaixo do header */
+    border-bottom: 1px solid var(--cor-borda-escura); 
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Espaça logo e navegação */
+    align-items: center;
+}
+
+/* --- LOGO --- */
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--cor-texto-claro); /* Texto Principal em Branco */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    /* Destaque sutil no nome */
+    color: var(--cor-cinza-sutil); 
+}
+
+/* --- NAVEGAÇÃO PRINCIPAL --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; /* Espaçamento entre links */
+}
+
+nav ul li a {
+    color: var(--cor-texto-claro); /* Links em Branco */
+    text-decoration: none;
+    font-weight: 600; 
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de destaque no HOVER */
+nav ul li a:hover {
+    color: var(--cor-cinza-hover); 
+}
+
+/* Linha de destaque (Sublinhado animado) */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--cor-destaque-acao-vibrante); /* Cor Laranja como destaque */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%; /* Linha Laranja aparece no hover/ativo */
+}
+
+/* --- BOTÃO DE AÇÃO (Laranja) --- */
+.btn-destaque {
+    /* Cor de Destaque Laranja Vibrante, consistente com o footer */
+    background-color: var(--cor-destaque-acao-vibrante); 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px; 
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; 
+    font-family: inherit; 
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-destaque:hover {
+    /* Cor de hover Laranja Escura */
+    background-color: var(--cor-hover-acao-vibrante);
+    transform: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+    /* Garante empilhamento e centralização em telas pequenas */
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
+    .btn-destaque {
+        margin-left: 0;
+        width: 80%; 
+        max-width: 300px;
+    }
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+/* Logo da ONG */
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #FFFFFF; /* Branco para o logo */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    color: #CCCCCC; /* Cinza claro para destaque sutil no nome */
+}
+
+/* Navegação Principal */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* Links brancos em fundo escuro */
+    text-decoration: none;
+    font-weight: 600; 
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de destaque ao passar o mouse */
+nav ul li a:hover {
+    color: #666666; /* Cinza no hover */
+}
+
+/* Linha de destaque na navegação ativa/hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #666666; /* Linha de destaque em cinza médio */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Botão de Destaque "Doe Agora" - ESTILO VIBRANTE */
+.btn-destaque {
+    /* Usando a cor de destaque vibrante (Laranja/Coral) */
+    background-color: var(--cor-destaque-acao-vibrante); 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px; /* Consistente com a versão monocromática */
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; 
+    font-family: inherit; 
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* Adiciona sombra para flutuar no fundo escuro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-destaque:hover {
+    /* Cor de hover mais escura */
+    background-color: var(--cor-hover-acao-vibrante);
+    transform: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes para o mobile (media query) permanecem os mesmos */
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo da ONG (Monocromático) */
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ffffff; /* Preto forte para o logo */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    color: #ffffff; /* Cinza de destaque sutil no nome */
+}
+
+/* Navegação Principal (Monocromático) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Cinza escuro para links normais */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de destaque ao passar o mouse */
+nav ul li a:hover {
+    color: #ffffff; /* Preto total no hover */
+}
+
+/* Linha de destaque na navegação ativa/hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff; /* Linha de destaque em cinza médio */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Botão de Destaque "Doe Agora" (Monocromático) */
+.btn-destaque {
+     background-color: var(--cor-destaque-acao-vibrante) !important; 
+    color: white !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 4px; /* Mais quadrado, seguindo a estética minimalista */
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 20px;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-destaque:hover {
+    background-color: #ffffff; /* Cinza no hover */
+    transform: none; /* Remove o efeito de levantar para ser mais discreto */
+    box-shadow: none;
+}
+
+/* Os ajustes para mobile (media query) permanecem os mesmos */

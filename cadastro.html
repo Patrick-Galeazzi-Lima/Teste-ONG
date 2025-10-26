@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Portal do Doador/Voluntário</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            ▊ Abrace o <span>Futuro</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="doacao.html" class="btn-destaque">Doe Agora</a>
+    </div>
+</header>
+
+    <main>
+        
+        <section class="hero-section" style="background-color: #1a1a1a; color: white; padding: 80px 25px; text-align: center;">
+            <h1 style="font-size: 2.8em; margin-bottom: 10px; font-weight: 800;">CRIE SUA CONTA GRATUITA</h1>
+            <p style="font-size: 1.2em; max-width: 700px; margin: 0 auto; color: #CCCCCC;">
+                Gerencie suas doações, acompanhe seu impacto e cadastre-se para ser voluntário.
+            </p>
+        </section>
+
+        <section class="content-section" style="max-width: 500px; margin: 40px auto; padding: 25px; text-align: left;">
+            <form action="/registrar" method="POST" style="background-color: #f5f5f5; padding: 30px; border-radius: 8px;">
+                <h2 style="text-align: center; margin-bottom: 30px;">Dados Pessoais</h2>
+                
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="nome_completo" style="display: block; margin-bottom: 5px; font-weight: 600;">Nome Completo:</label>
+                    <input type="text" id="nome_completo" name="nome_completo" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="email_cadastro" style="display: block; margin-bottom: 5px; font-weight: 600;">E-mail:</label>
+                    <input type="email" id="email_cadastro" name="email_cadastro" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="senha" style="display: block; margin-bottom: 5px; font-weight: 600;">Senha:</label>
+                    <input type="password" id="senha" name="senha" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="confirma_senha" style="display: block; margin-bottom: 5px; font-weight: 600;">Confirme a Senha:</label>
+                    <input type="password" id="confirma_senha" name="confirma_senha" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <button type="submit" class="btn-destaque" 
+                        style="background-color: var(--cor-destaque-acao-vibrante); color: white; width: 100%; padding: 15px; font-size: 1.1em;">
+                    Finalizar Cadastro
+                </button>
+                
+                <p style="text-align: center; margin-top: 20px;">
+                    Já tem uma conta? <a href="login.html" style="color: var(--cor-destaque-acao-vibrante); font-weight: 600;">Faça Login</a>
+                </p>
+            </form>
+        </section>
+        
+        <section style="background-color: #333333; color: white; padding: 40px; text-align: center; margin-top: 40px;">
+            <h3 style="color: var(--cor-destaque-acao-vibrante); margin-bottom: 15px;">O que você ganha ao se registrar?</h3>
+            <p style="max-width: 800px; margin: 0 auto; color: #CCCCCC;">
+                Acesso a relatórios exclusivos, gerenciamento fácil das suas doações e prioridade em convites para eventos de voluntariado.
+            </p>
+        </section>
+
+    </main>
+
+       <footer>
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h4>Links de Utilidade</h4>
+            <ul>
+                <li><a href="faq.html">FAQ (Perguntas Frequentes)</a></li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="imprensa.html">Notícias / Imprensa</a></li>
+                <li><a href="carreiras.html">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Sua Conta</h4>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="dashboard.html">Meu Painel</a></li>
+                <li><a href="historico.html">Histórico de Doações</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Legal &amp; Termos</h4>
+            <ul>
+                <li><a href="termos.html">Termos de Uso</a></li>
+                <li><a href="politica.html">Política de Privacidade</a></li>
+                <li><a href="auditoria.html">Transparência e Auditoria</a></li>
+                <li><a href="certificacoes.html">Nossas Certificações</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navegue no Site</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                <li><a href="contato.html">Contato</a></li> </ul>
+        </div>
+        
+        <div class="footer-section client-engagement">
+            <h4>Envolvimento e Social</h4>
+            <p>Siga-nos nas redes e faça parte da comunidade Abrace o Futuro.</p>
+            <div class="social-links" style="margin-top: 15px;">
+                <a href="#" aria-label="Facebook" style="color: white; margin-right: 15px;">F</a>
+                <a href="#" aria-label="Instagram" style="color: white; margin-right: 15px;">I</a>
+                <a href="#" aria-label="LinkedIn" style="color: white;">L</a>
+            </div>
+            <a href="doacao.html" 
+               class="btn-destaque-vibrante" 
+               style="margin-top: 20px; display: block; width: 100%;">
+                FAÇA SUA DOAÇÃO AGORA
+            </a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-bottom">
+        &copy; 2025 Abrace o Futuro ONG | Todos os direitos reservados.
+    </div>
+</footer>
+
+</body>
+</html>

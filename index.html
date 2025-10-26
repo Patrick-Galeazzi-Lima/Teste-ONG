@@ -3,635 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Home - Apoio Comunitário</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        // 2. A configuração customizada do Tailwind deve vir APÓS o CDN
-        const customTailwindConfig = {
-            theme: {
-                extend: {
-                    colors: {
-                        'ngo-primary': '#4f46e5', // Padrão: Indigo
-                        'ngo-dark': '#3730a3',
-                        'ngo-light': '#eef2ff',
-                        'emerald-600': '#059669',
-                        'orange-600': '#ea580c',
-                    },
-                    boxShadow: {
-                        '3xl': '0 10px 30px rgba(0, 0, 0, 0.1)',
-                    }
-                }
-            }
-        };
-        tailwind.config = customTailwindConfig;
-        window.customTailwindConfig = customTailwindConfig; // Expor para debug (opcional)
-    </script>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>Abrace o Futuro ONG | Transformando Vidas com Transparência</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
-<body class="text-gray-800">
+<body>
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-ngo-primary tracking-tight" data-nav>
-                Apoio Comunitário
+   <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            ▊ Abrace o <span>Futuro</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="doacao.html" class="btn-destaque">Doe Agora</a>
+    </div>
+</header>
+
+    <main>
+        
+        <section class="hero-section" style="background-color: #1a1a1a; color: white; padding: 120px 25px; text-align: center;">
+            <h1 style="font-size: 3.2em; margin-bottom: 15px; font-weight: 800; text-transform: uppercase;">
+                O FUTURO QUE VOCÊ ABRAÇA HOJE.
+            </h1>
+            <p style="font-size: 1.3em; max-width: 900px; margin: 0 auto 40px; color: #CCCCCC;">
+                Financiamos projetos de sustentabilidade e educação com transparência total. Seja a mudança que o mundo precisa.
+            </p>
+            <a href="doacao.html" class="btn-destaque" 
+               style="background-color: var(--cor-destaque-acao-vibrante); padding: 15px 40px; font-size: 1.2em;">
+                DOE AGORA E VEJA O IMPACTO
             </a>
+        </section>
 
-            <nav id="desktop-nav" class="hidden md:flex space-x-8 font-medium">
-                <a href="/" class="nav-link text-gray-600 hover:text-ngo-primary transition duration-150" data-nav>Início</a>
-                <a href="/projeto" class="nav-link text-gray-600 hover:text-ngo-primary transition duration-150" data-nav>O que Fazemos</a>
-                <a href="/contato" class="nav-link text-gray-600 hover:text-ngo-primary transition duration-150" data-nav>Contato/Doar</a>
-            </nav>
+        <section class="content-section impact-numbers" style="background-color: white; padding: 40px 20px;">
+            <div class="stats-grid" style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 30px;">
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5em; color: var(--cor-destaque-acao-vibrante); margin-bottom: 5px;">25</h3>
+                    <p style="text-transform: uppercase; font-weight: 600; color: #333;">Projetos Ativos</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5em; color: var(--cor-destaque-acao-vibrante); margin-bottom: 5px;">+5K</h3>
+                    <p style="text-transform: uppercase; font-weight: 600; color: #333;">Vidas Impactadas</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5em; color: var(--cor-destaque-acao-vibrante); margin-bottom: 5px;">98%</h3>
+                    <p style="text-transform: uppercase; font-weight: 600; color: #333;">Verba Aplicada</p>
+                </div>
+            </div>
+        </section>
 
-            <button id="menu-button" class="md:hidden text-gray-500 hover:text-ngo-primary focus:outline-none" aria-label="Menu Mobile">
-                <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
+        <section class="content-section" style="padding: 60px 25px;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Nossas Principais Áreas de Atuação</h2>
+            
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div class="project-card" style="background-color: #f5f5f5; padding: 20px; border-radius: 6px; text-align: left;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Educação Digital Inclusiva</h3>
+                    <p>Focamos em levar tecnologia e conhecimento para comunidades carentes, preparando jovens para o mercado de trabalho do futuro.</p>
+                    <a href="projetos.html#educacao" style="color: var(--cor-destaque-acao-vibrante); font-weight: 600; margin-top: 15px; display: block;">Ver Projeto &rarr;</a>
+                </div>
+                
+                <div class="project-card" style="background-color: #f5f5f5; padding: 20px; border-radius: 6px; text-align: left;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Sustentabilidade Urbana</h3>
+                    <p>Ações de reflorestamento, reciclagem e conscientização ambiental em grandes centros urbanos, buscando cidades mais verdes.</p>
+                    <a href="projetos.html#sustentabilidade" style="color: var(--cor-destaque-acao-vibrante); font-weight: 600; margin-top: 15px; display: block;">Ver Projeto &rarr;</a>
+                </div>
+                
+                <div class="project-card" style="background-color: #f5f5f5; padding: 20px; border-radius: 6px; text-align: left;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Relatórios de Transparência</h3>
+                    <p>Nosso pilar de prestação de contas. Publicamos a cada trimestre como e onde o seu dinheiro está sendo aplicado.</p>
+                    <a href="auditoria.html" style="color: var(--cor-destaque-acao-vibrante); font-weight: 600; margin-top: 15px; display: block;">Ver Relatórios &rarr;</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section style="background-color: #333333; color: white; padding: 50px; text-align: center;">
+            <h2 style="color: white;">Quer Ir Além da Doação?</h2>
+            <p style="margin-bottom: 30px;">Junte-se a nós como voluntário ou proponha uma parceria empresarial.</p>
+            <a href="voluntariado.html" class="btn-destaque" 
+               style="background-color: white; color: #333333; margin-right: 15px;">
+                Quero Ser Voluntário
+            </a>
+            <a href="parcerias.html" class="btn-destaque" 
+               style="background-color: #555555; color: white;">
+                Propor Parceria
+            </a>
+        </section>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="/" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-ngo-light hover:text-ngo-primary" data-nav>Início</a>
-                <a href="/projeto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-ngo-light hover:text-ngo-primary" data-nav>O que Fazemos</a>
-                <a href="/contato" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-ngo-light hover:text-ngo-primary" data-nav>Contato/Doar</a>
-            </nav>
-        </div>
-    </header>
-
-    <main id="spa-content" class="py-16 md:py-24">
     </main>
 
-    <footer class="bg-gray-800 text-white pt-16 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-700 pb-10 mb-8">
-
-                <div>
-                    <h4 class="text-xl font-bold mb-4 text-ngo-primary">Apoio Comunitário</h4>
-                    <p class="text-gray-400 text-sm">Empoderando comunidades através de educação, saúde e desenvolvimento social.</p>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Navegação</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="/" class="hover:text-ngo-primary transition duration-150" data-nav>Início</a></li>
-                        <li><a href="/projeto" class="hover:text-ngo-primary transition duration-150" data-nav>O que Fazemos</a></li>
-                        <li><a href="/contato" class="hover:text-ngo-primary transition duration-150" data-nav>Contato e Doações</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Projetos Chave</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="/projeto" class="hover:text-indigo-400 transition duration-150" data-nav>Educação para o Futuro</a></li>
-                        <li><a href="/projeto" class="hover:text-emerald-400 transition duration-150" data-nav>Saúde e Bem-Estar</a></li>
-                        <li><a href="/projeto" class="hover:text-orange-400 transition duration-150" data-nav>Voluntariado e Engajamento</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Fale Conosco</h4>
-                    <p class="text-gray-400 text-sm">
-                        Email: <a href="mailto:contato@apoio.org" class="hover:text-ngo-primary">contato@apoio.org</a><br>
-                        Telefone: (11) 98765-4321
-                    </p>
-                    <div class="flex space-x-4 mt-4">
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center text-gray-500 text-sm">
-                &copy; 2024 Apoio Comunitário. Todos os direitos reservados.
-            </div>
+        <footer>
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h4>Links de Utilidade</h4>
+            <ul>
+                <li><a href="faq.html">FAQ (Perguntas Frequentes)</a></li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="imprensa.html">Notícias / Imprensa</a></li>
+                <li><a href="carreiras.html">Trabalhe Conosco</a></li>
+            </ul>
         </div>
-    </footer>
 
-    <div id="donation-modal" class="fixed inset-0 z-50 bg-gray-900 bg-opacity-75 hidden transition-opacity duration-300">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm transform transition-all duration-300 scale-100">
-                <div class="text-center">
-                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-emerald-100">
-                        <svg class="h-6 w-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    </div>
-                    <h3 class="mt-5 text-lg leading-6 font-medium text-gray-900">Doação Registrada!</h3>
-                    <div class="mt-2">
-                        <p class="text-sm text-gray-500">
-                            Obrigado por sua doação de <strong id="modal-donation-amount" class="text-emerald-600">R$ 0,00</strong>. Sua contribuição é vital para nossos projetos.
-                        </p>
-                    </div>
-                </div>
-                <div class="mt-5 sm:mt-6">
-                    <button type="button" id="close-modal-button" class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-ngo-primary text-base font-medium text-white hover:bg-ngo-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ngo-primary sm:text-sm">
-                        Continuar Navegando
-                    </button>
-                </div>
-            </div>
+        <div class="footer-section">
+            <h4>Sua Conta</h4>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="dashboard.html">Meu Painel</a></li>
+                <li><a href="historico.html">Histórico de Doações</a></li>
+            </ul>
         </div>
-    </div>
 
-    <div id="project-modal" class="fixed inset-0 z-50 bg-gray-900 bg-opacity-75 hidden transition-opacity duration-300">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-xl transform transition-all duration-300 scale-100">
-                <div class="flex justify-between items-start border-b pb-4 mb-4">
-                    <h3 id="modal-project-title" class="text-2xl font-bold text-ngo-primary">Detalhes do Projeto</h3>
-                    <button type="button" id="close-project-modal-button" class="text-gray-400 hover:text-gray-600 transition duration-150" aria-label="Fechar Modal">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                </div>
-                <div id="modal-project-content" class="text-base text-gray-700 space-y-4">
-                    <p class="text-center text-gray-500">Carregando detalhes...</p>
-                </div>
-                <div class="mt-6 pt-4 border-t flex justify-end">
-                    <button type="button" id="close-project-modal-button-footer" class="rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ngo-primary sm:text-sm">
-                        Fechar
-                    </button>
-                </div>
-            </div>
+        <div class="footer-section">
+            <h4>Legal &amp; Termos</h4>
+            <ul>
+                <li><a href="termos.html">Termos de Uso</a></li>
+                <li><a href="politica.html">Política de Privacidade</a></li>
+                <li><a href="auditoria.html">Transparência e Auditoria</a></li>
+                <li><a href="certificacoes.html">Nossas Certificações</a></li>
+            </ul>
         </div>
+
+        <div class="footer-section">
+            <h4>Navegue no Site</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                <li><a href="contato.html">Contato</a></li> </ul>
+        </div>
+        
+        <div class="footer-section client-engagement">
+            <h4>Envolvimento e Social</h4>
+            <p>Siga-nos nas redes e faça parte da comunidade Abrace o Futuro.</p>
+            <div class="social-links" style="margin-top: 15px;">
+                <a href="#" aria-label="Facebook" style="color: white; margin-right: 15px;">F</a>
+                <a href="#" aria-label="Instagram" style="color: white; margin-right: 15px;">I</a>
+                <a href="#" aria-label="LinkedIn" style="color: white;">L</a>
+            </div>
+            <a href="doacao.html" 
+               class="btn-destaque-vibrante" 
+               style="margin-top: 20px; display: block; width: 100%;">
+                FAÇA SUA DOAÇÃO AGORA
+            </a>
+        </div>
+        
     </div>
     
-    <script>
-        // ######################################################################
-        // ################ SISTEMA DE MODELOS JAVASCRIPT (TEMPLATING) ##########
-        // ######################################################################
+    <div class="footer-bottom">
+        &copy; 2025 Abrace o Futuro ONG | Todos os direitos reservados.
+    </div>
+</footer>
 
-        // NOVO: Detalhes dos Projetos para o Modal
-        const projectDetails = {
-            'educacao': {
-                title: 'Educação para o Futuro: Especificações',
-                content: `
-                    <h4 class="text-xl font-bold text-indigo-600 mb-2">Pilar: Educação e Tecnologia</h4>
-                    <p class="text-gray-700 mb-4">O projeto Educação para o Futuro é uma iniciativa dedicada a construir bases sólidas para o futuro profissional de crianças e adolescentes (8 a 16 anos) em áreas de vulnerabilidade social. O programa foca estrategicamente na alfabetização digital e no reforço escolar para mitigar a defasagem educacional.</p>
-                    <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Metas e Escopo:</h4>
-                    <ul class="list-disc list-inside space-y-1 text-gray-600 ml-4">
-                        <li>**Público-alvo:Habilidades Digitais: Aulas de Lógica e Programação básica (HTML, CSS e JavaScript).</li>
-                        <li>**Conteúdo:Apoio Pedagógico: Reforço em disciplinas essenciais como Matemática e Português.</li>
-                        <li>**Parcerias:** 5 escolas municipais.</li>
-                    </ul>
-                    <p class="text-sm text-gray-500 mt-6">Clique em "O que Fazemos" no menu para ver o planejamento completo.</p>
-                `
-            },
-            'saude': {
-                title: 'Saúde e Bem-Estar: Especificações',
-                content: `
-                    <h4 class="text-xl font-bold text-emerald-600 mb-2">Pilar: Saúde e Nutrição</h4>
-                    <p class="text-gray-700 mb-4">Nosso projeto de Saúde e Bem-Estar opera uma **Clínica Móvel** que leva atendimento primário, vacinação e acompanhamento nutricional diretamente às comunidades que mais precisam.</p>
-                    <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Serviços e Impacto:</h4>
-                    <ul class="list-disc list-inside space-y-1 text-gray-600 ml-4">
-                        <li>**Atendimento:** Consultas médicas, odontológicas e pediátricas primárias.</li>
-                        <li>**Prevenção:** Campanhas de vacinação e educação sanitária.</li>
-                        <li>**Nutrição:** Acompanhamento e distribuição de cestas nutritivas para famílias de baixa renda.</li>
-                        <li>**Meta Trimestral:** Realizar 1.500 atendimentos.</li>
-                    </ul>
-                    <p class="text-sm text-gray-500 mt-6">O projeto é financiado por doações recorrentes. Sua ajuda é vital para a manutenção da clínica.</p>
-                `
-            },
-            'voluntariado': {
-                title: 'Voluntariado e Engajamento: Especificações',
-                content: `
-                    <h4 class="text-xl font-bold text-orange-600 mb-2">Pilar: Voluntariado e Ação Comunitária</h4>
-                    <p class="text-gray-700 mb-4">Esta iniciativa é o motor de nossas ações, conectando pessoas dispostas a ajudar com as necessidades específicas da comunidade, através de uma plataforma de engajamento.</p>
-                    <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Detalhes da Ação:</h4>
-                    <ul class="list-disc list-inside space-y-1 text-gray-600 ml-4">
-                        <li>**Tipos de Ação:** Mutirões de limpeza, reformas comunitárias, oficinas de habilidades e mentoria.</li>
-                        <li>**Voluntários Ativos:** 300+ cadastrados.</li>
-                        <li>**Processo:** Cadastro, treinamento online e alocação por habilidade e proximidade geográfica.</li>
-                        <li>**Necessidade Imediata:** Voluntários para suporte administrativo e TI.</li>
-                    </ul>
-                    <p class="text-sm text-gray-500 mt-6">Visite a página "Contato/Doar" para se cadastrar como voluntário e ver os próximos eventos.</p>
-                `
-            },
-        };
-
-        const pageContents = {
-            '/': {
-                title: 'Home - Apoio Comunitário',
-                content: `
-                    <section class="relative bg-white pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                <div>
-                                    <h1 class="text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
-                                        Transformando Vidas, <span class="text-ngo-primary">Construindo Futuros</span>.
-                                    </h1>
-                                    <p class="text-xl text-gray-600 mb-8 max-w-lg">
-                                        Somos uma ONG dedicada a empoderar comunidades através de iniciativas focadas em educação, saúde e desenvolvimento social.
-                                    </p>
-
-                                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                        <a href="/contato" class="bg-ngo-primary hover:bg-ngo-dark text-white font-semibold py-3 px-8 rounded-lg transition btn-primary text-center shadow-xl" data-nav>
-                                            Faça uma Doação Agora
-                                        </a>
-                                        <a href="/projeto" class="bg-white border-2 border-indigo-500 text-indigo-500 hover:bg-indigo-50 transition duration-150 font-semibold py-3 px-8 rounded-lg text-center shadow-md" data-nav>
-                                            Conheça Nossos Projetos
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="hidden lg:block">
-                                    <img src="img/voluntarios.jpg" alt="Ilustração de comunidade se unindo para ajudar." class="rounded-xl shadow-2xl transform hover:scale-[1.01] transition duration-500">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="py-16 md:py-24 bg-gray-50">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div class="text-center mb-16">
-                                <span class="text-ngo-primary font-bold uppercase tracking-widest">Nosso Compromisso</span>
-                                <h2 class="text-4xl font-extrabold text-gray-900 mt-3 mb-4">Missão e Visão de Impacto</h2>
-                                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                                    Temos três pilares fundamentais que guiam todas as nossas ações de apoio comunitário e transformação social.
-                                </p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-600">
-                                    <div class="text-indigo-600 mb-4">
-                                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.464 9.492 5 8 5c-3.314 0-6 2.686-6 6 0 2.348 1.332 4.39 3.316 5.567M12 6.253C13.168 5.464 14.508 5 16 5c3.314 0 6 2.686 6 6 0 2.348-1.332 4.39-3.316 5.567"></path></svg>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Educação e Tecnologia</h3>
-                                    <p class="text-gray-600">Oferecemos cursos de reforço e programação para criar novas oportunidades e capacitar jovens para o mercado futuro.</p>
-                                </div>
-                                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-emerald-600">
-                                    <div class="text-emerald-600 mb-4">
-                                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Saúde e Nutrição</h3>
-                                    <p class="text-gray-600">Realizamos consultas primárias e programas de conscientização para garantir o bem-estar físico e mental nas comunidades.</p>
-                                </div>
-                                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-orange-600">
-                                    <div class="text-orange-600 mb-4">
-                                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M12 10a5 5 0 00-5 5v2m10-7a5 5 0 00-5-5v2"></path></svg>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Voluntariado e Ação</h3>
-                                    <p class="text-gray-600">Conectamos voluntários com paixão e habilidades aos projetos que precisam de ajuda em mutirões e ações pontuais.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="acao" class="py-16 md:py-24">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div class="text-center mb-16">
-                                <span class="text-ngo-primary font-bold uppercase tracking-widest">FAÇA PARTE</span>
-                                <h2 class="text-4xl font-extrabold text-gray-900 mt-3 mb-4">Como Ajudamos na Prática</h2>
-                                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                                    Clique nos projetos abaixo para ver as **especificações detalhadas** em um pop-up.
-                                </p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                                <div class="project-card block bg-white rounded-xl shadow-2xl hover:shadow-indigo-500/50 transition duration-300 transform hover:scale-[1.02] border-t-4 border-indigo-600 cursor-pointer" data-project-id="educacao">
-                                    <img class="w-full h-48 object-cover rounded-t-xl" src="img/projeto-educacao.jpg" alt="Aula de reforço com crianças e professores." loading="lazy">
-                                    <div class="p-6">
-                                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Educação para o Futuro</h3>
-                                        <p class="text-gray-600 text-sm mb-4">Foco em alfabetização digital, matemática e português. Criando bases sólidas.</p>
-                                        <span class="text-indigo-600 font-semibold inline-flex items-center">Ver Especificações
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <div class="project-card block bg-white rounded-xl shadow-2xl hover:shadow-emerald-500/50 transition duration-300 transform hover:scale-[1.02] border-t-4 border-emerald-600 cursor-pointer" data-project-id="saude">
-                                    <img class="w-full h-48 object-cover rounded-t-xl" src="img/projeto-saude.jpg" alt="Clínica móvel de saúde comunitária." loading="lazy">
-                                    <div class="p-6">
-                                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Saúde e Bem-Estar</h3>
-                                        <p class="text-gray-600 text-sm mb-4">Atendimento primário e preventivo com nossa clínica móvel. Cuidado direto e essencial.</p>
-                                        <span class="text-emerald-600 font-semibold inline-flex items-center">Ver Especificações
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <div class="project-card block bg-white rounded-xl shadow-2xl hover:shadow-orange-500/50 transition duration-300 transform hover:scale-[1.02] border-t-4 border-orange-600 cursor-pointer" data-project-id="voluntariado">
-                                    <img class="w-full h-48 object-cover rounded-t-xl" src="img/voluntarios.jpg" alt="Grupo de voluntários trabalhando juntos." loading="lazy">
-                                    <div class="p-6">
-                                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Voluntariado e Engajamento</h3>
-                                        <p class="text-gray-600 text-sm mb-4">Conectando pessoas dispostas a ajudar com as necessidades da comunidade.</p>
-                                        <span class="text-orange-600 font-semibold inline-flex items-center">Ver Especificações
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center mt-16">
-                                <a href="/projeto" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-10 rounded-lg transition duration-150 inline-block text-lg shadow-xl" data-nav>Ver Todos os Projetos</a>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="bg-ngo-primary py-16 md:py-24 text-white">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <h2 class="text-4xl font-extrabold mb-4">Seja a Mudança que Você Quer Ver</h2>
-                            <p class="text-xl text-indigo-200 max-w-3xl mx-auto mb-8">
-                                Sua doação ou seu tempo fazem uma diferença real na vida de milhares de pessoas.
-                            </p>
-                            <a href="/contato" class="bg-white text-ngo-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-150 inline-block text-lg shadow-xl" data-nav>
-                                Contribuir Agora
-                            </a>
-                        </div>
-                    </section>
-                `
-            },
-            '/projeto': {
-                title: 'O Que Fazemos - Apoio Comunitário',
-                content: `
-                    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-4">Nossa Visão de Impacto</h1>
-                        <p class="text-xl text-center text-gray-600 mb-12 max-w-4xl mx-auto">
-                            Cada projeto é desenhado para atacar uma necessidade específica, garantindo impacto social e transformação duradoura.
-                        </p>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                            <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-indigo-600">
-                                <span class="text-indigo-600 font-bold text-lg mb-2 block">Pilar - 1</span>
-                                <h2 class="text-3xl font-bold text-gray-900 mb-4">Educação para o Futuro</h2>
-                                <p class="text-gray-600 mb-6">Foco em alfabetização digital e reforço escolar para mais de 500 crianças. Promovemos aulas de programação e pensamento crítico.</p>
-                                <a href="/contato" class="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-150 inline-flex items-center" data-nav>
-                                    Voluntarie-se neste projeto &rarr;
-                                </a>
-                            </div>
-
-                            <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-emerald-600">
-                                <span class="text-emerald-600 font-bold text-lg mb-2 block">Pilar -2</span>
-                                <h2 class="text-3xl font-bold text-gray-900 mb-4">Saúde e Bem-Estar</h2>
-                                <p class="text-gray-600 mb-6">Clínica móvel que oferece atendimento primário, vacinação e acompanhamento nutricional para famílias carentes.</p>
-                                <a href="/contato" class="text-emerald-600 font-semibold hover:text-emerald-800 transition duration-150 inline-flex items-center" data-nav>
-                                    Doe para a área de Saúde &rarr;
-                                </a>
-                            </div>
-
-                            <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-orange-600">
-                                <span class="text-orange-600 font-bold text-lg mb-2 block">Pilar - 3</span>
-                                <h2 class="text-3xl font-bold text-gray-900 mb-4">Voluntariado e Ação</h2>
-                                <p class="text-gray-600 mb-6">Nossa plataforma de engajamento conecta 300+ voluntários ativos com ações de curto e longo prazo na comunidade.</p>
-                                <a href="/contato" class="text-orange-600 font-semibold hover:text-orange-800 transition duration-150 inline-flex items-center" data-nav>
-                                    Saiba como se engajar &rarr;
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="mt-20 text-center bg-ngo-light p-10 rounded-xl">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Faça Parte da Nossa História</h3>
-                            <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
-                                Seu apoio financeiro é essencial para manter todos esses projetos funcionando e expandir nosso alcance.
-                            </p>
-                            <a href="/contato" class="bg-ngo-primary hover:bg-ngo-dark text-white font-semibold py-3 px-8 rounded-lg transition duration-150 shadow-lg" data-nav>
-                                Fazer uma Doação
-                            </a>
-                        </div>
-                    </section>
-                `
-            },
-            '/contato': {
-                title: 'Contato e Doações - Apoio Comunitário',
-                content: `
-                    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-4">Fale Conosco e Doe</h1>
-                        <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                            Sua generosidade financia a esperança. Entre em contato ou faça sua doação segura agora mesmo.
-                        </p>
-
-                        <div class="bg-white p-10 rounded-xl shadow-3xl grid grid-cols-1 md:grid-cols-2 gap-10 border-t-8 border-ngo-primary">
-                            <div>
-                                <h2 class="text-3xl font-bold text-ngo-primary mb-4">Entre em Contato</h2>
-                                <p class="text-gray-600 mb-6">
-                                    Estamos disponíveis para responder suas dúvidas sobre nossos projetos, voluntariado e parcerias.
-                                </p>
-                                <ul class="space-y-4 text-lg">
-                                    <li><strong>Email:</strong> <a href="mailto:contato@apoio.org" class="text-ngo-primary hover:text-ngo-dark">contato@apoio.org</a></li>
-                                    <li><strong>Telefone:</strong> (11) 98765-4321</li>
-                                    <li><strong>Endereço:</strong> Rua da Cidadania, 123 - São Paulo, SP</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h2 class="text-3xl font-bold text-emerald-600 mb-4">Faça sua Doação</h2>
-                                <p class="text-gray-600 mb-6">
-                                    Utilize nossa plataforma segura para fazer uma doação única ou mensal.
-                                </p>
-                                <form id="donation-form" action="#" method="POST" class="space-y-4">
-                                    <div>
-                                        <label for="amount" class="block text-sm font-medium text-gray-700">Valor da Doação (R$)</label>
-                                        <input type="number" id="amount" name="amount" required min="10" placeholder="50.00" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-ngo-primary focus:border-ngo-primary">
-                                    </div>
-                                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-150 shadow-lg">
-                                        Doar com Cartão/Pix
-                                    </button>
-                                    <p class="text-xs text-center text-gray-500 mt-3">Transação 100% segura e livre de taxas.</p>
-                                </form>
-                            </div>
-                        </div>
-                    </section>
-                `
-            },
-        };
-
-        // ######################################################################
-        // ########################## LÓGICA DO SPA #############################
-        // ######################################################################
-
-        const spaContent = document.getElementById('spa-content');
-        const pageTitle = document.getElementById('page-title');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuButton = document.getElementById('menu-button');
-        const iconMenu = document.getElementById('icon-menu');
-        const iconClose = document.getElementById('icon-close');
-        
-        // Lógica para o pop-up de doação na página /contato
-        const setupContactPageListeners = () => {
-            const form = document.getElementById('donation-form');
-            const amountInput = document.getElementById('amount');
-            const modal = document.getElementById('donation-modal');
-            const modalAmount = document.getElementById('modal-donation-amount');
-            const closeModalButton = document.getElementById('close-modal-button');
-
-            if (form && amountInput && modal && closeModalButton) {
-                // 1. Ouvinte para o envio do formulário
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault(); // Impede o envio real do formulário
-                    
-                    const donationValue = parseFloat(amountInput.value);
-
-                    // Validação simples
-                    if (isNaN(donationValue) || donationValue < 10) {
-                        alert('Por favor, insira um valor de doação válido (mínimo R$ 10,00).');
-                        return;
-                    }
-
-                    // Formata o valor para BRL (Real Brasileiro)
-                    const formattedValue = donationValue.toLocaleString('pt-BR', { 
-                        style: 'currency', 
-                        currency: 'BRL' 
-                    });
-
-                    // Atualiza o valor no pop-up e exibe
-                    modalAmount.textContent = formattedValue;
-                    modal.classList.remove('hidden');
-
-                    // Opcional: Limpar o formulário após "envio"
-                    form.reset();
-                });
-
-                // 2. Ouvinte para fechar o modal
-                closeModalButton.addEventListener('click', () => {
-                    modal.classList.add('hidden');
-                });
-                
-                // 3. Fechar modal ao clicar fora (no overlay)
-                modal.addEventListener('click', (e) => {
-                    if (e.target.id === 'donation-modal') {
-                        modal.classList.add('hidden');
-                    }
-                });
-            }
-        };
-
-        // NOVO: Lógica para o pop-up de detalhes do projeto
-        const setupProjectModalListeners = () => {
-            const cards = document.querySelectorAll('.project-card');
-            const modal = document.getElementById('project-modal');
-            const title = document.getElementById('modal-project-title');
-            const content = document.getElementById('modal-project-content');
-            const closeButtons = document.querySelectorAll('#close-project-modal-button, #close-project-modal-button-footer');
-            
-            // 1. Ouvinte para abrir o modal ao clicar no card
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const projectId = card.getAttribute('data-project-id');
-                    const data = projectDetails[projectId];
-                    
-                    if (data) {
-                        // Injeta o conteúdo no modal
-                        title.textContent = data.title;
-                        content.innerHTML = data.content;
-                        
-                        // Exibe o modal
-                        modal.classList.remove('hidden');
-                    }
-                });
-            });
-            
-            // 2. Ouvinte para fechar o modal (botões internos e overlay)
-            closeButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    modal.classList.add('hidden');
-                });
-            });
-            
-            // 3. Fechar modal ao clicar fora (no overlay)
-            modal.addEventListener('click', (e) => {
-                if (e.target.id === 'project-modal') {
-                    modal.classList.add('hidden');
-                }
-            });
-        };
-
-
-        /**
-         * Lógica para alternar o Menu Mobile
-         */
-        const toggleMobileMenu = () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('block');
-            iconMenu.classList.toggle('hidden');
-            iconClose.classList.toggle('hidden');
-        };
-
-        /**
-         * Função de Roteamento Principal (Router)
-         */
-        const handleRoute = (path, isInitialLoad = false) => {
-            // Normaliza o caminho para corresponder às chaves no `pageContents`
-            const normalizedPath = path.split('#')[0].split('?')[0].replace(/\/$/, '') || '/';
-            const pageData = pageContents[normalizedPath];
-
-            if (pageData) {
-                // 1. Atualiza o Histórico do Navegador
-                if (!isInitialLoad) {
-                    window.history.pushState({ path: normalizedPath }, pageData.title, normalizedPath);
-                } else {
-                    window.history.replaceState({ path: normalizedPath }, pageData.title, normalizedPath);
-                }
-
-                // 2. Atualiza o DOM
-                pageTitle.textContent = pageData.title;
-                spaContent.innerHTML = pageData.content;
-                window.scrollTo(0, 0); // Sobe ao topo da página
-
-                // Anexa listeners de interatividade APÓS a renderização do conteúdo.
-                if (normalizedPath === '/contato') {
-                    setupContactPageListeners();
-                }
-                
-                // NOVO: Anexa os listeners do modal de projeto ao carregar a home.
-                if (normalizedPath === '/') { 
-                    setupProjectModalListeners();
-                }
-
-                // 3. Atualiza os links ativos
-                document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-                    // Limpa classes ativas
-                    link.classList.remove('text-ngo-primary', 'font-semibold', 'border-b-2', 'border-ngo-primary', 'bg-ngo-light');
-                    
-                    // Verifica se é um link de navegação desktop
-                    if (link.classList.contains('nav-link')) {
-                        link.classList.add('text-gray-600', 'hover:text-ngo-primary');
-                        if (link.getAttribute('href') === normalizedPath) {
-                            link.classList.remove('text-gray-600');
-                            link.classList.add('text-ngo-primary', 'border-b-2', 'border-ngo-primary', 'font-semibold');
-                        }
-                    } 
-                    // Verifica se é um link de navegação mobile
-                    else if (link.classList.contains('mobile-nav-link')) {
-                         link.classList.add('text-gray-700', 'hover:bg-ngo-light', 'hover:text-ngo-primary');
-                        if (link.getAttribute('href') === normalizedPath) {
-                             link.classList.add('text-ngo-primary', 'bg-ngo-light');
-                             link.classList.remove('text-gray-700');
-                        }
-                    }
-                });
-
-                // Se o menu mobile estiver aberto, fecha ele
-                if (!mobileMenu.classList.contains('hidden')) {
-                    toggleMobileMenu();
-                }
-
-            } else {
-                // Conteúdo 404
-                spaContent.innerHTML = '<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 class="text-6xl font-extrabold text-red-600 mb-4">404</h1><p class="text-xl text-gray-600">Página não encontrada.</p></section>';
-                window.history.pushState({}, '404 - Apoio Comunitário', path);
-                pageTitle.textContent = '404 - Apoio Comunitário';
-            }
-        };
-
-        // ######################################################################
-        // ###################### INICIALIZAÇÃO E EVENTOS #######################
-        // ######################################################################
-
-        // 1. Configura o listener para navegação SPA
-        document.addEventListener('click', (e) => {
-            const anchor = e.target.closest('a[data-nav]');
-            // Verifica se o clique foi em um link com o atributo data-nav
-            if (anchor) {
-                e.preventDefault();
-                const path = anchor.getAttribute('href');
-                handleRoute(path);
-            }
-        });
-
-        // 2. Configura o listener para o botão do Menu Mobile
-        menuButton.addEventListener('click', toggleMobileMenu);
-
-        // 3. Configura o listener para navegação de volta/avanço do navegador
-        window.addEventListener('popstate', (e) => {
-            // O caminho é pego de window.location.pathname e NÃO de e.state.path, para lidar com a carga inicial e 404s
-            handleRoute(window.location.pathname, true);
-        });
-
-        // 4. Carrega o conteúdo inicial da página
-        document.addEventListener('DOMContentLoaded', () => {
-            handleRoute(window.location.pathname, true);
-        });
-
-    </script>
 </body>
 </html>

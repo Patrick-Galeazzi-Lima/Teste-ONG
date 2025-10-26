@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcerias | Junte Sua Marca à Nossa Causa</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            ▊ Abrace o <span>Futuro</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="doacao.html" class="btn-destaque">Doe Agora</a>
+    </div>
+</header>
+    <main>
+        
+        <section class="hero-section" style="background-color: #333333; color: white; padding: 80px 25px; text-align: center;">
+            <h1 style="font-size: 2.8em; margin-bottom: 10px; font-weight: 800;">ALCANCE NOVOS HORIZONTES COM PARCERIAS</h1>
+            <p style="font-size: 1.2em; max-width: 800px; margin: 0 auto 30px; color: #CCCCCC;">
+                Sua empresa pode ser a força motriz por trás da próxima grande transformação social.
+            </p>
+            <a href="#fale-conosco" class="btn-destaque" style="background-color: var(--cor-destaque-acao-vibrante); padding: 15px 40px;">Proponha uma Parceria</a>
+        </section>
+
+        <section class="content-section" style="padding: 60px 25px; background-color: #1a1a1a; color: white;">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--cor-destaque-acao-vibrante);">Vantagens de ser um Parceiro</h2>
+            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                
+                <div class="benefit-card" style="background-color: #333333; padding: 20px; border-radius: 6px;">
+                    <h3 style="color: white; margin-bottom: 10px;">Fortalecimento da Marca</h3>
+                    <p style="color: #CCCCCC;">Associe-se a uma ONG reconhecida pela alta transparência e impacto social.</p>
+                </div>
+                <div class="benefit-card" style="background-color: #333333; padding: 20px; border-radius: 6px;">
+                    <h3 style="color: white; margin-bottom: 10px;">Incentivo Fiscal</h3>
+                    <p style="color: #CCCCCC;">Aproveite os benefícios fiscais para empresas que investem em causas sociais aprovadas.</p>
+                </div>
+                <div class="benefit-card" style="background-color: #333333; padding: 20px; border-radius: 6px;">
+                    <h3 style="color: white; margin-bottom: 10px;">Engajamento de Equipe</h3>
+                    <p style="color: #CCCCCC;">Oferecemos programas de voluntariado corporativo exclusivos para seus colaboradores.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fale-conosco" class="content-section" style="max-width: 800px; margin: 60px auto; padding: 25px; text-align: left;">
+            <h2 style="text-align: center; margin-bottom: 30px;">Envie sua Proposta de Parceria</h2>
+            <form action="/enviar-parceria" method="POST">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="empresa" style="display: block; margin-bottom: 5px; font-weight: 600;">Nome da Empresa/Instituição:</label>
+                    <input type="text" id="empresa" name="empresa" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="contato_email" style="display: block; margin-bottom: 5px; font-weight: 600;">E-mail de Contato:</label>
+                    <input type="email" id="contato_email" name="contato_email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="mensagem" style="display: block; margin-bottom: 5px; font-weight: 600;">Descreva a Proposta:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </div>
+                <button type="submit" class="btn-destaque" 
+                        style="background-color: var(--cor-destaque-acao-vibrante); color: white; width: 100%;">
+                    Enviar Proposta
+                </button>
+            </form>
+        </section>
+    </main>
+
+   <footer>
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h4>Links de Utilidade</h4>
+            <ul>
+                <li><a href="faq.html">FAQ (Perguntas Frequentes)</a></li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="imprensa.html">Notícias / Imprensa</a></li>
+                <li><a href="carreiras.html">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Sua Conta</h4>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="dashboard.html">Meu Painel</a></li>
+                <li><a href="historico.html">Histórico de Doações</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Legal &amp; Termos</h4>
+            <ul>
+                <li><a href="termos.html">Termos de Uso</a></li>
+                <li><a href="politica.html">Política de Privacidade</a></li>
+                <li><a href="auditoria.html">Transparência e Auditoria</a></li>
+                <li><a href="certificacoes.html">Nossas Certificações</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navegue no Site</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                <li><a href="contato.html">Contato</a></li> </ul>
+        </div>
+        
+        <div class="footer-section client-engagement">
+            <h4>Envolvimento e Social</h4>
+            <p>Siga-nos nas redes e faça parte da comunidade Abrace o Futuro.</p>
+            <div class="social-links" style="margin-top: 15px;">
+                <a href="#" aria-label="Facebook" style="color: white; margin-right: 15px;">F</a>
+                <a href="#" aria-label="Instagram" style="color: white; margin-right: 15px;">I</a>
+                <a href="#" aria-label="LinkedIn" style="color: white;">L</a>
+            </div>
+            <a href="doacao.html" 
+               class="btn-destaque-vibrante" 
+               style="margin-top: 20px; display: block; width: 100%;">
+                FAÇA SUA DOAÇÃO AGORA
+            </a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-bottom">
+        &copy; 2025 Abrace o Futuro ONG | Todos os direitos reservados.
+    </div>
+</footer>
+
+</body>
+</html>
