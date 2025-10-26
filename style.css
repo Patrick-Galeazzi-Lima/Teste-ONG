@@ -1,3 +1,122 @@
+/* ============================================================== */
+/* MENU HAMBURGUER & RESPONSIVIDADE ESPECÍFICA (Adicione ao style.css) */
+/* ============================================================== */
+
+/* Esconde o ícone hamburguer e a navegação no DESKTOP */
+.hamburger-toggle {
+    display: none;
+}
+
+/* Esconde o botão CTA do header no mobile para evitar poluição visual */
+.header-cta {
+    display: block; /* Visível no desktop */
+}
+
+/* --- ESTILIZAÇÃO DO ÍCONE HAMBURGUER --- */
+.hamburger-toggle {
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 20; /* Fica acima do menu quando aberto */
+}
+
+.hamburger-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 4px 0;
+    background-color: var(--cor-destaque-acao-vibrante);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* Classe JS para o menu aberto (Animação X) */
+.hamburger-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ============================================================== */
+/* MEDIA QUERY: Mudar para o Layout Mobile (Max-width 768px)      */
+/* ============================================================== */
+@media (max-width: 768px) {
+
+    /* --- GERAL HEADER MOBILE --- */
+    .header-container {
+        flex-direction: row; /* Volta para row, mas alinhado */
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        margin: 0; /* Remove margem desnecessária */
+    }
+
+    /* Oculta o botão CTA e exibe o hamburguer */
+    .header-cta {
+        display: none !important;
+    }
+    .hamburger-toggle {
+        display: block; /* Mostra o ícone Hamburguer */
+    }
+
+    /* --- MENU NAVEGAÇÃO MOBILE --- */
+    #mainNav {
+        /* Estilos do menu lateral/tela cheia */
+        position: fixed;
+        top: 0;
+        left: -100%; /* Começa fora da tela */
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background-color: var(--cor-fundo-dark);
+        padding-top: 80px; /* Espaço para o header */
+        transition: left 0.4s ease-in-out;
+        z-index: 10;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Classe adicionada pelo JS quando o menu está aberto */
+    #mainNav.menu-open {
+        left: 0; /* Desliza para dentro da tela */
+    }
+
+    #mainNav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 0;
+    }
+
+    #mainNav ul li {
+        border-bottom: 1px solid #444;
+    }
+
+    #mainNav ul li a {
+        display: block;
+        padding: 15px 10px;
+        color: var(--cor-texto-claro);
+        font-size: 1.1em;
+    }
+
+    #mainNav ul li a:hover,
+    #mainNav ul li a.active {
+        background-color: #444;
+        color: var(--cor-destaque-acao-vibrante);
+    }
+
+    /* O restante das regras de responsividade (grids, etc.) da resposta anterior devem permanecer no style.css */
+}
+
 /* ============================================== */
 /* ESTILOS PARA O POP-UP (MODAL) DE CONFIRMAÇÃO */
 /* ============================================== */
@@ -309,33 +428,122 @@ nav ul li a.active::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* --- RESPONSIVIDADE (MOBILE) --- */
+/* ============================================================== */
+/* 4. MEDIA QUERIES PARA MOBILE (Até 768px) - LAYOUT AJUSTADO     */
+/* ============================================================== */
+
 @media (max-width: 768px) {
-    /* Garante empilhamento e centralização em telas pequenas */
-    .header-container {
+    
+    /* --- CONFIGURAÇÃO GERAL MOBILE --- */
+    
+    /* Aumenta o padding vertical para dar mais espaço */
+    .content-section {
+        padding: 40px 20px; 
+    }
+    
+    /* Reduz o tamanho do texto do corpo para melhor leitura em tela pequena */
+    body {
+        font-size: 15px; 
+    }
+    
+    /* --- HERO SECTION MOBILE --- */
+    .hero-section {
+        padding: 40px 20px !important; /* Mais compacto */
+    }
+    
+    .hero-section h1 {
+        font-size: 2em !important; /* Título mais legível */
+        margin-bottom: 15px !important;
+    }
+    
+    .hero-section p {
+        font-size: 1em !important;
+    }
+    
+    
+    /* --- GRIDS DE CONTEÚDO (Home, Projetos, Parcerias, Auditoria) --- */
+    
+    /* Converte todas as colunas para uma única coluna */
+    .projects-grid, 
+    .projects-list-grid, 
+    .contact-grid,
+    .partner-logo-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    /* Garante que o grid de estatísticas fique em coluna e centralizado (Home) */
+    .stats-grid, .values-grid {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px !important;
+        text-align: center;
     }
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap; 
-        gap: 15px;
+    
+    .stat-item {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #EEE;
     }
-    .btn-destaque {
-        margin-left: 0;
-        width: 80%; 
-        max-width: 300px;
+    
+    /* --- FORMULÁRIOS (Contato, Cadastro) --- */
+    
+    /* Faz com que grupos de formulário de duas colunas virem uma coluna (ex: Nome/Email) */
+    .form-row {
+        flex-direction: column;
+        gap: 15px !important;
+    }
+
+    /* --- PÁGINA DE DOAÇÃO (doacao.html) --- */
+    
+    /* Converte o layout de doação de 2 colunas para 1 coluna */
+    .donation-steps-container {
+        grid-template-columns: 1fr !important; 
+        gap: 30px !important;
+    }
+    
+    /* Reduz o padding do painel de pagamento para economizar espaço */
+    .payment-form-panel form {
+        padding: 20px !important;
+    }
+
+    .donation-options-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important; /* Mantém botões em linha, mas ajustáveis */
+    }
+    
+    /* --- PÁGINA DE AUDITORIA (auditoria.html) --- */
+    .report-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+        padding: 15px !important;
+    }
+
+    .report-item a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    /* --- RODAPÉ (FOOTER) MOBILE --- */
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 30px;
+        border-top: 1px solid #444;
+        padding-top: 20px;
+    }
+    
+    .footer-links a {
+        padding: 5px 0;
     }
 }
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
 /* Logo da ONG */
 .logo {
     font-size: 1.8em;
