@@ -1,3 +1,20 @@
+/* Adicione (ou verifique) esta regra no seu style.css */
+main {
+    /* Garante que o main use a largura máxima e centralize */
+    width: 100%; 
+    max-width: 100%;
+    margin: 0 auto; 
+    /* Adicione padding se necessário para separar visualmente do header/footer */
+    padding-top: 0; 
+    padding-bottom: 0;
+}
+
+/* Garante que o container interno use o máximo de espaço com padding lateral */
+#app-content {
+    min-height: 80vh; 
+    padding: 0 0 40px 0; /* Padding inferior para o rodapé */
+}
+
 /* ============================================================== */
 /* MENU HAMBURGUER & RESPONSIVIDADE ESPECÍFICA (Adicione ao style.css) */
 /* ============================================================== */
@@ -49,73 +66,81 @@
 /* ============================================================== */
 /* MEDIA QUERY: Mudar para o Layout Mobile (Max-width 768px)      */
 /* ============================================================== */
-@media (max-width: 768px) {
+/* ============================================================== */
+/* 4. MEDIA QUERIES PARA MOBILE (Até 768px) - LAYOUT OTIMIZADO    */
+/* ============================================================== */
 
-    /* --- GERAL HEADER MOBILE --- */
+@media (max-width: 768px) {
+    
+    /* --- CONFIGURAÇÃO GERAL MOBILE --- */
+    
+    /* Garante que o conteúdo use a largura total e tenha padding nas laterais */
+    .header-container,
+    .content-section,
+    .footer-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%; /* Garante que não haja limite estreito */
+    }
+    
+    /* Reduz o padding vertical para otimizar a rolagem */
+    .content-section {
+        padding: 40px 20px; 
+    }
+    
+    body {
+        font-size: 15px; 
+    }
+    
+    /* --- HERO SECTION MOBILE (Resolvendo o Problema da Imagem) --- */
+    .hero-section {
+        padding: 60px 20px !important; 
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2em !important; /* Aumenta um pouco mais que antes, mas menor que desktop */
+        line-height: 1.2;
+    }
+    
+    /* CORREÇÃO DO BOTÃO CORTADO */
+    .hero-section a.btn-destaque {
+        /* O botão usa a maior parte da largura do container, mas com margem */
+        width: 90%; 
+        max-width: 400px; 
+        margin: 0 auto; 
+        display: block !important; /* Garante que ele ocupe a largura total definida */
+        padding: 18px 20px !important; /* Padding ajustado */
+    }
+    
+    /* --- HEADER E HAMBURGUER --- */
     .header-container {
-        flex-direction: row; /* Volta para row, mas alinhado */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-    
-    .logo {
-        margin: 0; /* Remove margem desnecessária */
-    }
+    /* ... (Mantenha os estilos do .hamburger-toggle e #mainNav que já foram fornecidos) ... */
 
-    /* Oculta o botão CTA e exibe o hamburguer */
-    .header-cta {
-        display: none !important;
-    }
-    .hamburger-toggle {
-        display: block; /* Mostra o ícone Hamburguer */
-    }
-
-    /* --- MENU NAVEGAÇÃO MOBILE --- */
-    #mainNav {
-        /* Estilos do menu lateral/tela cheia */
-        position: fixed;
-        top: 0;
-        left: -100%; /* Começa fora da tela */
-        height: 100vh;
-        width: 70%;
-        max-width: 300px;
-        background-color: var(--cor-fundo-dark);
-        padding-top: 80px; /* Espaço para o header */
-        transition: left 0.4s ease-in-out;
-        z-index: 10;
-        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+    /* --- GRIDS E COLUNAS --- */
+    .projects-grid, 
+    .contact-grid,
+    .donation-steps-container,
+    .partner-logo-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
     }
     
-    /* Classe adicionada pelo JS quando o menu está aberto */
-    #mainNav.menu-open {
-        left: 0; /* Desliza para dentro da tela */
-    }
-
-    #mainNav ul {
+    .stats-grid {
         flex-direction: column;
-        padding: 20px;
-        gap: 0;
+        gap: 20px !important;
     }
-
-    #mainNav ul li {
-        border-bottom: 1px solid #444;
+    
+    /* --- RODAPÉ --- */
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
     }
+}   /* O restante das regras de responsividade (grids, etc.) da resposta anterior devem permanecer no style.css */
 
-    #mainNav ul li a {
-        display: block;
-        padding: 15px 10px;
-        color: var(--cor-texto-claro);
-        font-size: 1.1em;
-    }
-
-    #mainNav ul li a:hover,
-    #mainNav ul li a.active {
-        background-color: #444;
-        color: var(--cor-destaque-acao-vibrante);
-    }
-
-    /* O restante das regras de responsividade (grids, etc.) da resposta anterior devem permanecer no style.css */
-}
 
 /* ============================================== */
 /* ESTILOS PARA O POP-UP (MODAL) DE CONFIRMAÇÃO */
@@ -132,10 +157,7 @@
     background-color: rgba(0,0,0,0.8); /* Fundo preto semi-transparente (Dark/Vibrante) */
 }
 
-.modal-content {
-    /* O conteúdo central do pop-up */
-    /* Estilos base foram colocados inline para garantir que funcionem de imediato */
-}
+
 
 .close-btn:hover,
 .close-btn:focus {

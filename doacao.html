@@ -1,220 +1,115 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doação | Apoie a ONG Abrace o Futuro</title>
-    <link rel="stylesheet" href="style.css"> 
-    </head>
-<body>
+<section class="hero-section" style="background-color: var(--cor-destaque-acao-vibrante); color: white; padding: 60px 25px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+    <h1 style="color: white; font-size: 2.5em; margin-bottom: 10px;">SEU DINHEIRO, SEU IMPACTO!</h1>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1em;">
+        Escolha o valor e a forma de pagamento. Mude o futuro de crianças e do meio ambiente com um clique.
+    </p>
+</section>
 
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                ▊ Abrace o <span>Futuro</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="parcerias.html">Parcerias</a></li>
-                    <li><a href="sobre.html">Quem Somos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-            <span style="color: var(--cor-destaque-acao-vibrante); font-weight: 700; font-size: 1.1em;">Faça sua Doação</span>
-        </div>
-    </header>
-
-    <main>
+<section class="content-section" style="max-width: 900px; margin: 40px auto 60px; padding: 25px; text-align: left;">
+    
+    <div class="donation-steps-container" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px;">
         
-        <section class="hero-section" style="background-color: var(--cor-destaque-acao-vibrante); color: white; padding: 60px 25px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
-            <h1 style="color: white; font-size: 2.5em; margin-bottom: 10px;">SEU DINHEIRO, SEU IMPACTO!</h1>
-            <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1em;">
-                Escolha o valor e a forma de pagamento. Mude o futuro de crianças e do meio ambiente com um clique.
-            </p>
-        </section>
-
-        <section class="content-section" style="max-width: 900px; margin: 40px auto 60px; padding: 25px; text-align: left;">
-            
-            <div class="donation-steps-container" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px;">
-                
-                <div class="donation-purpose-panel" style="background-color: #f5f5f5; padding: 30px; border-radius: 8px;">
-                    <h2 style="margin-bottom: 20px;">1. Escolha o Valor da Doação</h2>
-                    <div class="donation-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
-                        <button class="donation-value-btn" data-value="25" style="background-color: white; border: 2px solid #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">R$ 25</button>
-                        <button class="donation-value-btn" data-value="50" style="background-color: white; border: 2px solid #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">R$ 50</button>
-                        <button class="donation-value-btn" data-value="100" style="background-color: white; border: 2px solid #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">R$ 100</button>
-                        <button class="donation-value-btn" data-value="livre" style="background-color: white; border: 2px solid var(--cor-destaque-acao-vibrante); color: var(--cor-destaque-acao-vibrante); padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">Outro Valor</button>
-                    </div>
-                    <input type="number" id="outro_valor" placeholder="R$ 0,00" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1.1em; text-align: center; margin-bottom: 25px;">
-                    <h3 style="color: #333; margin-bottom: 10px;">100% Rastreável</h3>
-                    <p style="font-size: 0.9em; color: #666;">Garantimos a transparência total. Você pode acompanhar o uso do seu recurso em tempo real através do nosso <a href="auditoria.html" style="color: var(--cor-destaque-acao-vibrante); text-decoration: none; font-weight: 600;">Portal de Auditoria</a>.</p>
-                </div>
-                
-                <div class="payment-form-panel">
-                    <h2 style="margin-bottom: 20px;">2. Finalize e Pague</h2>
-                    
-                    <form id="donationForm" style="background-color: #1a1a1a; padding: 30px; border-radius: 8px; color: white;">
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <label for="nome_doador" style="display: block; margin-bottom: 5px; font-weight: 600; color: #CCCCCC;">Nome Completo:</label>
-                            <input type="text" id="nome_doador" name="nome_doador" required style="width: 100%; padding: 12px; border: 1px solid #555; border-radius: 4px; background-color: #333; color: white;">
-                        </div>
-                        
-                        <div class="form-group" style="margin-bottom: 25px;">
-                            <label for="metodo" style="display: block; margin-bottom: 5px; font-weight: 600; color: #CCCCCC;">Método de Pagamento:</label>
-                            <select id="metodo" name="metodo" required style="width: 100%; padding: 12px; border: 1px solid #555; border-radius: 4px; background-color: #333; color: white;">
-                                <option value="pix" style="color: white;">PIX (Processamento Imediato)</option>
-                                <option value="cartao" style="color: white;">Cartão de Crédito</option>
-                                <option value="boleto" style="color: white;">Boleto Bancário</option>
-                            </select>
-                        </div>
-                        
-                        <div style="margin-top: 40px;">
-                            <button type="submit" id="confirmButton" class="btn-destaque-final" 
-                                    style="background-color: var(--cor-destaque-acao-vibrante); color: #1a1a1a; border: none; width: 100%; padding: 20px; font-size: 1.4em; font-weight: 800; text-transform: uppercase; cursor: pointer; border-radius: 4px; box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);">
-                                CONFIRMAR DOAÇÃO
-                            </button>
-                        </div>
-
-                        <p style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #999;">
-                            🔒 Sua doação é 100% segura e criptografada.
-                        </p>
-                    </form>
-                </div>
+        <div class="donation-purpose-panel" style="background-color: #f5f5f5; padding: 30px; border-radius: 8px;">
+            <h2 style="margin-bottom: 20px;">1. Escolha o Valor da Doação</h2>
+            <div class="donation-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                <button class="donation-value-btn" data-value="25" style="background-color: white; border: 2px solid #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">R$ 25</button>
+                <button class="donation-value-btn" data-value="50" style="background-color: white; border: 2px solid #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">R$ 50</button>
+                <button class="donation-value-btn" data-value="100" style="background-color: white; border: 2px solid #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">R$ 100</button>
+                <button class="donation-value-btn" data-value="livre" style="background-color: white; border: 2px solid var(--cor-destaque-acao-vibrante); color: var(--cor-destaque-acao-vibrante); padding: 15px; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer;">Outro Valor</button>
             </div>
-            
-        </section>
+            <input type="number" id="outro_valor" placeholder="R$ 0,00" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1.1em; text-align: center; margin-bottom: 25px;">
+            <h3 style="color: #333; margin-bottom: 10px;">100% Rastreável</h3>
+            <p style="font-size: 0.9em; color: #666;">Garantimos a transparência total. Você pode acompanhar o uso do seu recurso em tempo real através do nosso <a href="#auditoria" class="nav-link" style="color: var(--cor-destaque-acao-vibrante); text-decoration: none; font-weight: 600;">Portal de Auditoria</a>.</p>
+        </div>
         
-        <section style="text-align: center; margin-top: 20px; padding-bottom: 60px;">
-            <p style="font-size: 1.1em; color: #666;">Prefere continuar navegando?</p>
-            <a href="index.html" class="btn-secundario-dark" style="background-color: #1a1a1a; color: white; padding: 10px 25px; border-radius: 4px; margin-top: 10px; display: inline-block; text-decoration: none;">
-                &larr; Voltar para a Página Inicial
-            </a>
-        </section>
+        <div class="payment-form-panel">
+            <h2 style="margin-bottom: 20px;">2. Finalize e Pague</h2>
+            
+            <form id="donationForm" style="background-color: #1a1a1a; padding: 30px; border-radius: 8px; color: white;">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="nome_doador" style="display: block; margin-bottom: 5px; font-weight: 600; color: #CCCCCC;">Nome Completo:</label>
+                    <input type="text" id="nome_doador" name="nome_doador" required style="width: 100%; padding: 12px; border: 1px solid #555; border-radius: 4px; background-color: #333; color: white;">
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="metodo" style="display: block; margin-bottom: 5px; font-weight: 600; color: #CCCCCC;">Método de Pagamento:</label>
+                    <select id="metodo" name="metodo" required style="width: 100%; padding: 12px; border: 1px solid #555; border-radius: 4px; background-color: #333; color: white;">
+                        <option value="pix" style="color: white;">PIX (Processamento Imediato)</option>
+                        <option value="cartao" style="color: white;">Cartão de Crédito</option>
+                        <option value="boleto" style="color: white;">Boleto Bancário</option>
+                    </select>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <button type="submit" id="confirmButton" class="btn-destaque-final" 
+                            style="background-color: var(--cor-destaque-acao-vibrante); color: #1a1a1a; border: none; width: 100%; padding: 20px; font-size: 1.4em; font-weight: 800; text-transform: uppercase; cursor: pointer; border-radius: 4px; box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);">
+                        CONFIRMAR DOAÇÃO
+                    </button>
+                </div>
 
-        <div id="confirmationModal" class="modal" style="display: none;">
-            <div class="modal-content" style="background-color: white; border-radius: 8px; max-width: 450px; margin: 15% auto; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
-                <span class="close-btn" style="float: right; font-size: 28px; font-weight: bold; cursor: pointer; color: #AAA;">&times;</span>
-                <h2 style="color: var(--cor-destaque-acao-vibrante); margin-bottom: 15px; font-size: 2em;">🎉 Doação Confirmada!</h2>
-                <p style="margin-bottom: 25px; font-size: 1.1em;">
-                    Obrigado por seu apoio! Sua contribuição será aplicada diretamente em nossos projetos.
+                <p style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #999;">
+                    🔒 Sua doação é 100% segura e criptografada.
                 </p>
-                <a href="index.html" class="btn-destaque" 
-                   style="background-color: var(--cor-destaque-acao-vibrante); color: white; padding: 10px 30px; display: inline-block;">
-                    Voltar para a Home
-                </a>
-            </div>
+            </form>
         </div>
-
-    </main>
-
-       <footer>
-    <div class="footer-container">
-        
-        <div class="footer-section">
-            <h4>Links de Utilidade</h4>
-            <ul>
-                <li><a href="faq.html">FAQ (Perguntas Frequentes)</a></li>
-                <li><a href="contato.html">Entre em Contato</a></li>
-                <li><a href="imprensa.html">Notícias / Imprensa</a></li>
-                <li><a href="carreiras.html">Trabalhe Conosco</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Sua Conta</h4>
-            <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
-                <li><a href="dashboard.html">Meu Painel</a></li>
-                <li><a href="historico.html">Histórico de Doações</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Legal &amp; Termos</h4>
-            <ul>
-                <li><a href="termos.html">Termos de Uso</a></li>
-                <li><a href="politica.html">Política de Privacidade</a></li>
-                <li><a href="auditoria.html">Transparência e Auditoria</a></li>
-                <li><a href="certificacoes.html">Nossas Certificações</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Navegue no Site</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Quem Somos</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="parcerias.html">Parcerias</a></li> <li><a href="voluntariado.html">Seja Voluntário</a></li>
-                <li><a href="contato.html">Contato</a></li> </ul>
-        </div>
-        
-        <div class="footer-section client-engagement">
-            <h4>Envolvimento e Social</h4>
-            <p>Siga-nos nas redes e faça parte da comunidade Abrace o Futuro.</p>
-            <div class="social-links" style="margin-top: 15px;">
-                <a href="#" aria-label="Facebook" style="color: white; margin-right: 15px;">F</a>
-                <a href="#" aria-label="Instagram" style="color: white; margin-right: 15px;">I</a>
-                <a href="#" aria-label="LinkedIn" style="color: white;">L</a>
-            </div>
-            <a href="doacao.html" 
-               class="btn-destaque-vibrante" 
-               style="margin-top: 20px; display: block; width: 100%;">
-                FAÇA SUA DOAÇÃO AGORA
-            </a>
-        </div>
-        
     </div>
     
-    <div class="footer-bottom">
-        &copy; 2025 Abrace o Futuro ONG | Todos os direitos reservados.
+</section>
+
+<section style="text-align: center; margin-top: 20px; padding-bottom: 60px;">
+    <p style="font-size: 1.1em; color: #666;">Prefere continuar navegando?</p>
+    <a href="#home" class="btn-secundario-dark nav-link" style="background-color: #1a1a1a; color: white; padding: 10px 25px; border-radius: 4px; margin-top: 10px; display: inline-block; text-decoration: none;">
+        &larr; Voltar para a Página Inicial
+    </a>
+</section>
+
+<div id="confirmationModal" class="modal" style="display: none;">
+    <div class="modal-content" style="background-color: white; border-radius: 8px; max-width: 450px; margin: 15% auto; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+        <span class="close-btn" style="float: right; font-size: 28px; font-weight: bold; cursor: pointer; color: #AAA;">&times;</span>
+        <h2 style="color: var(--cor-destaque-acao-vibrante); margin-bottom: 15px; font-size: 2em;">🎉 Doação Confirmada!</h2>
+        <p style="margin-bottom: 25px; font-size: 1.1em;">
+            Obrigado por seu apoio! Sua contribuição será aplicada diretamente em nossos projetos.
+        </p>
+        <a href="#home" class="btn-destaque nav-link" 
+           style="background-color: var(--cor-destaque-acao-vibrante); color: white; padding: 10px 30px; display: inline-block;">
+            Voltar para a Home
+        </a>
     </div>
-</footer>
+</div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('donationForm');
+        const modal = document.getElementById('confirmationModal');
+        const closeBtn = modal.querySelector('.close-btn');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('donationForm');
-            const modal = document.getElementById('confirmationModal');
-            const closeBtn = modal.querySelector('.close-btn');
-
-            // 1. Oculta o modal ao clicar no 'X'
+        // 1. Oculta o modal ao clicar no 'X'
+        if (closeBtn) {
             closeBtn.onclick = function() {
                 modal.style.display = "none";
             }
+        }
 
-            // 2. Oculta o modal ao clicar fora dele
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
+        // 2. Oculta o modal ao clicar fora dele
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
+        }
 
-            // 3. Simula o envio do formulário e mostra o pop-up
-            form.addEventListener('submit', function(event) {
-                // Previne o comportamento padrão (recarregar/mudar de página)
+        // 3. Simula o envio do formulário e mostra o pop-up
+        if (form) {
+             form.addEventListener('submit', function(event) {
                 event.preventDefault(); 
                 
-                // Simulação de validação (na vida real, aqui você enviaria os dados ao servidor)
                 if (form.checkValidity()) {
-                    // Simulação de sucesso no envio
                     console.log('Dados de doação enviados com sucesso (Simulação)');
-                    
-                    // Mostra o pop-up de confirmação
                     modal.style.display = "block";
-                    
-                    // Opcional: Limpar o formulário após a simulação de envio
                     form.reset();
                 } else {
-                    // Se a validação falhar (ex: campo required vazio), o navegador já mostra um erro
                     console.error('Formulário inválido. Preencha todos os campos obrigatórios.');
                 }
             });
-        });
-    </script>
-<script src="script.js" defer></script>
-</body>
-</html>
+        }
+    });
+</script>
