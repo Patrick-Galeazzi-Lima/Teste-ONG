@@ -737,6 +737,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    
     // === 7. INICIALIZAÇÃO ===
     // Inicia a aplicação carregando a página inicial ou a rota do hash
     navigate(window.location.hash);

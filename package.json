@@ -1,0 +1,26 @@
+{
+  "name": "aulaprogramacaoweb",
+  "version": "1.0.0",
+  "description": ".\r Abrace o Futuro ONG - Landing Page (SPA)\r Projeto de uma Landing Page institucional para uma ONG fictícia, desenvolvido como uma Single Page Application (SPA) utilizando HTML5, CSS3 e JavaScript puro. O foco principal é a Transparência, a Navegação Rápida e o Engajamento do Usuário (Doações e Voluntariado).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrick-Galeazzi-Lima/Teste-ONG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Patrick-Galeazzi-Lima/Teste-ONG/issues"
+  },
+  "homepage": "https://github.com/Patrick-Galeazzi-Lima/Teste-ONG#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.19.3"
+  }
+}
