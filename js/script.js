@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="validation-message">A mensagem é obrigatória.</span>
                             </div>
 
-                            <button type="submit" class="btn-destaque" 
+                            <button aria-expanded="false" aria-controls="menu-principal" 
                                     style="background-color: var(--cor-destaque-acao-vibrante); color: white; width: 100%; padding: 15px; font-size: 1.1em;">
                                 Enviar Mensagem
                             </button>
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn-destaque" 
+                            <button aria-expanded="false" aria-controls="menu-principal"
                                     style="background-color: var(--cor-destaque-acao-vibrante); color: white; width: 100%; padding: 15px; font-size: 1.1em;">
                                 Doar Agora
                             </button>
@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <input type="password" id="confirma_senha" name="confirma_senha" required data-validation-type="password_confirm" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <span class="validation-message">As senhas não coincidem.</span>
                             </div>
-                            <button type="submit" class="btn-destaque" 
+                            <button aria-expanded="false" aria-controls="menu-principal"
                                     style="background-color: var(--cor-destaque-acao-vibrante); color: white; width: 100%; padding: 15px; font-size: 1.1em;">
                                 Finalizar Cadastro
                             </button>
@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <input type="password" id="senha_login" name="senha_login" required data-validation-type="password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <span class="validation-message">A senha é obrigatória.</span>
                             </div>
-                            <button type="submit" class="btn-destaque" 
+                            <button aria-expanded="false" aria-controls="menu-principal" 
                                     style="background-color: var(--cor-destaque-acao-vibrante); color: white; width: 100%; padding: 15px; font-size: 1.1em;">
                                 Entrar
                             </button>
